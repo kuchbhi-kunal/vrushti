@@ -112,7 +112,7 @@ h3{
   
   .animated-text {
     font-size: 5rem;
-    animation: slideAndGrow 3s ease-in-out forwards;
+    animation: slideAndGrow 2s ease-in-out forwards;
   }
   
   @keyframes slideAndGrow {
