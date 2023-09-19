@@ -103,3 +103,25 @@ h3{
     text-align: center;
     padding: 8px;
 }
+
+.animation-container {
+    height: 70vh;
+    width: 100%;
+
+  }
+  
+  .animated-text {
+    font-size: 5rem;
+    animation: slideAndGrow 3s ease-in-out forwards;
+  }
+  
+  @keyframes slideAndGrow {
+    0% {
+      transform: translateY(100%);
+      font-size: 5rem;
+    }
+    100% {
+      transform: translateY(0);
+      font-size: 12rem;
+    }
+  }
