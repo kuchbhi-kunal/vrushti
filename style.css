@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
+:root {
+  --arrow-bg: rgba(255, 255, 255, 0.3);
+  --arrow-icon: url(https://i.mscwlns.co/media/misc/others/Vector%20%281%29_ktqrn3.png?tr=w-600_);
+  --option-bg: white;
+  --select-bg: rgba(255, 255, 255, 0.2);
+}
+
 body{
     width: 100%;
     height: 100vh;
@@ -123,5 +130,56 @@ h3{
     100% {
       transform: translateY(0);
       font-size: 12rem;
+    }
+  }
+
+  select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    /* Personalize */
+    width: 25rem;
+    padding: 1rem 4rem 1rem 1rem;
+
+    background: var(--arrow-icon) no-repeat right 1em center / 1em, #ffffff;
+                /* linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em); */
+    color: rgb(29, 149, 255);
+    border-radius: 2rem;
+    /* box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+    /* Remove IE arrow */
+    &::-ms-expand {
+      display: none;
+    }
+    /* Remove focus outline */
+    &:focus {
+      outline: none;
+    }
+    /* <option> colors */
+    option {
+      color: inherit;
+      background-color: var(--option-bg);
+    }
+  }
+
+  input[type=submit]{
+    width: 115px;
+    border: none;
+    outline: none;
+    padding: .9rem;
+    border-radius: 5rem;
+    background: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(29, 149, 255);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px){
+    select{
+      width: 20rem;
     }
   }
